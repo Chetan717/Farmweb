@@ -9,7 +9,7 @@ import Refund from "../Refund";
 export default function FooterCom() {
   return (
     <>
-      <div className="relative mt-16 bg-black flex justify-center items-center">
+      <div className="relative mt-16 bg-[#476F00] flex justify-center items-center">
      
         <div className="px-4 flex flex-col gap-5 pt-8 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
           {/* <div className=" bg-white  p-3 rounded-lg flex justify-center items-center ">
@@ -47,7 +47,7 @@ export default function FooterCom() {
             +91-2345677865/+91-6467455555{" "}
           </p> */}
           <div className="flex flex-col justify-between pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
-            <div className="flex items-center bg-gray-100 justify-center gap-5 rounded-lg p-3 mt-4 space-x-4 sm:mt-0">
+            {/* <div className="flex items-center bg-gray-100 justify-center gap-5 rounded-lg p-3 mt-4 space-x-4 sm:mt-0">
               <a
                 href="/"
                 className="transition-colors duration-300 text-cyan-500 hover:text-cyan-600"
@@ -87,7 +87,7 @@ export default function FooterCom() {
                   <path d="M23.6 6.3c-.3-1.1-1-2-2.1-2.3C19.5 3 12 3 12 3S4.5 3 2.5 4c-1.1.3-1.8 1.2-2.1 2.3C0 8.4 0 12 0 12s0 3.6.4 5.7c.3 1.1 1 2 2.1 2.3C4.5 21 12 21 12 21s7.5 0 9.5-1c1.1-.3 1.8-1.2 2.1-2.3.4-2.1.4-5.7.4-5.7s0-3.6-.4-5.7zm-15.6 9.7V7.9l6.2 3.6-6.2 3.5z" />
                 </svg>
               </a>
-            </div>
+            </div> */}
             <p className="text-sm p-3 texxt-center text-gray-100">
               © Copyright 2023. All rights reserved.
             </p>

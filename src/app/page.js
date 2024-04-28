@@ -21,9 +21,12 @@ export default function page() {
       <div className="flex flex-col justify-center items-center lg:gap-5 gap-5 p-2">
         {/* <Categoriespro /> */}
         {/* <Hero /> */}
-        <Offer link={`https://d2xamzlzrdbdbn.cloudfront.net/bg/622cc7cb-6df1-4588-a77f-c8bfa18f738824080457.webp`} />
+        <Offer link={`https://desicart.co.uk/cdn/shop/collections/6c80e12d0fdb209cc1c85e55c06bf60b.jpg?v=1607617721`} />
         <PopularProd />
+        <Offer link={`https://t3.ftcdn.net/jpg/01/63/13/30/360_F_163133061_TlMOMqgxAvBuwzLAjxOQ8v1FQ3OexfRG.jpg`} />
+
       </div>
+
     </>
   );
 }

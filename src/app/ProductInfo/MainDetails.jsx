@@ -36,9 +36,9 @@ export default function MainDetails() {
                 <ProductDes des={i} />
               </div>
             </div>
-            <div className="flex justify-center items-center">
+            {/* <div className="flex justify-center items-center">
               <MoreInfo des={i} />
-            </div>
+            </div> */}
             <div className="flex justify-center items-center">
               <Related type={i.type} />
             </div>

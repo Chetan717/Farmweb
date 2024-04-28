@@ -33,7 +33,7 @@ export default function PopularProdList({ selType }) {
   return (
     <>
       {loading || !FilteredproductData ? (
-       <Spinner color="#000"/>
+       <Spinner />
       ) : (
         <>
           <div className="grid lg:grid-cols-4 grid-cols-2 md:grid-cols-3 mt-[30px]   gap-3 lg:gap-5">
@@ -73,7 +73,7 @@ export default function PopularProdList({ selType }) {
           {DataLength < load ? null : (
             <Button
               onClick={() => GetDataOnLoad(load + 8, DataLength)}
-              className="bg-black text-white font-bold"
+              className="bg-[#476F00] text-white font-bold"
             >
               Load More
             </Button>

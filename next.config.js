@@ -6,7 +6,8 @@ const nextConfig = {
       "res.cloudinary.com",
       "www.sportsuncle.com",
       "www.croma.com",
-      "media-ik.croma.com"
+      "media-ik.croma.com",
+      "www.bigbasket.com",
     ],
   },
   security: {
@@ -30,34 +31,11 @@ const nextConfig = {
     allowedExternalDomains: ["", "another-origin.com"],
   },
   env: {
-    GRAPHQL_SERVER: "https://serverelectronic.vercel.app/graph",
-    SHIPPING: "Pay To Delivery Partner",
+    GRAPHQL_SERVER: "http://localhost:8000/graph",
+    SHIPPING: "50",
     Discount: "10",
   },
-  headers: [
-    {
-      key: "X-Frame-Options",
-      value: "DENY",
-    },
-    {
-      key: "Content-Security-Policy",
-      value:
-        "default-src 'self' 'https://soilbooster.in'; image-src 'https://unsplash.com'; script-src 'self' https://www.google-analytics.com; font-src 'self' 'https://fonts.googleapis.com'",
-    },
-    {
-      key: "X-Content-Type-Options",
-      value: "nosniff",
-    },
-    {
-      key: "Permissions-Policy",
-      value:
-        "camera=(); battery=(self); geolocation=(); microphone=('https://soilbooster.in')",
-    },
-    {
-      key: "Referrer-Policy",
-      value: "origin-when-cross-origin",
-    },
-  ],
+ 
 };
 
 module.exports = nextConfig;

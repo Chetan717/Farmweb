@@ -276,7 +276,7 @@ export default function SignUp({ setStatus, statusca, setStatusca }) {
                     {load ? (
                       <Button
                         isLoading
-                        className="font-semibold text-sm text-white transition-colors duration-300 bg-black"
+                        className="font-semibold text-sm text-white transition-colors duration-300 bg-[#476F00]"
                         spinner={
                           <svg
                             className="animate-spin h-5 w-5 text-current"
@@ -304,7 +304,7 @@ export default function SignUp({ setStatus, statusca, setStatusca }) {
                       </Button>
                     ) : (
                       <Button
-                        className="font-semibold text-sm text-white transition-colors duration-300 bg-black"
+                        className="font-semibold text-sm text-white transition-colors duration-300 bg-[#476F00]"
                         onClick={(event) =>
                           HandleSignUp(login, event, SIGNUP, onClose)
                         }

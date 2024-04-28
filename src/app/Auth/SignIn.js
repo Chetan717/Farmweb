@@ -208,7 +208,7 @@ export default function SignIn({ status, setStatus, setStatusca }) {
                       <button
                         type="submit"
                         
-                        class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-black rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
+                        class="w-full px-4 py-2 text-lg font-semibold text-white transition-colors duration-300 bg-[#476F00] rounded-md shadow hover:bg-blue-600 focus:outline-none focus:ring-blue-200 focus:ring-4"
                       >
                         Log in
                       </button>
@@ -216,7 +216,7 @@ export default function SignIn({ status, setStatus, setStatusca }) {
                     {load ? (
                       <Button
                         isLoading
-                        className="font-semibold text-sm text-white transition-colors duration-300 bg-black"
+                        className="font-semibold text-sm text-white transition-colors duration-300 bg-[#476F00]"
                         spinner={
                           <svg
                             className="animate-spin h-5 w-5 text-current"

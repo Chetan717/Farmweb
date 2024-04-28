@@ -52,7 +52,7 @@ function CaptchaTest({ setCheck }) {
                 <div>
                     <Button
                         size='sm'
-                        className="bg-black text-white"
+                        className="bg-[#476F00] text-white"
                         onClick={() => doSubmit()}
                     >
                         Submit Captcha

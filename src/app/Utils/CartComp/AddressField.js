@@ -187,7 +187,7 @@ export default function App({ formValue, setFormValue, handleAdrsForm }) {
                 ) : (
                   <Button
                     onClick={() => handleSubmit(formValue)}
-                    className="text-white font-semibold bg-black"
+                    className="text-white font-semibold bg-[#476F00]"
                     onPress={onClose}
                   >
                     Save

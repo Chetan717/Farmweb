@@ -19,7 +19,7 @@ export default function Navbarcom() {
   const router = useRouter();
   return (
     <>
-      <Navbar className="bg-black" isBordered>
+      <Navbar className="bg-[#476F00]" isBordered>
         <NavbarContent justify="start">
           <NavbarBrand className="mr-4">
             <div
@@ -28,12 +28,11 @@ export default function Navbarcom() {
             >
               {/* <Image width={50} alt="h" height={50} src="/sbt.png" /> */}
               <p className="text-white inline-flex flex-col  font-bold lg:text-sm text-xs">
-                <span className="">ELECTONICS.</span>
+                <span className="">🍅FRESH 🥦FARM 🍓MARKET</span>
               </p>
             </div>
           </NavbarBrand>
         </NavbarContent>
-
         {user?.name ? (
           <NavbarContent
             as="div"
