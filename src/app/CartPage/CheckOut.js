@@ -1,7 +1,15 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { RadioGroup, Radio, cn } from "@nextui-org/react";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 import { DataProvideBYHook } from "../DataProviderContext/DataProviderContext";
 import SignIn from "../Auth/SignIn";
@@ -27,7 +35,12 @@ export const CustomRadio = (props) => {
   );
 };
 
-export default function CheckOut({ HandlePlaceOrder, orderfinal, DataCart, total }) {
+export default function CheckOut({
+  HandlePlaceOrder,
+  orderfinal,
+  DataCart,
+  total,
+}) {
   const Router = useRouter();
   const { user } = DataProvideBYHook();
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -40,8 +53,8 @@ export default function CheckOut({ HandlePlaceOrder, orderfinal, DataCart, total
     if (selected === "CARD") {
       // Load Razorpay script when "CARD" is selected
       const loadRazorpayScript = () => {
-        const script = document.createElement('script');
-        script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+        const script = document.createElement("script");
+        script.src = "https://checkout.razorpay.com/v1/checkout.js";
         script.async = true;
         script.onload = () => {
           // Razorpay script loaded successfully
@@ -54,7 +67,9 @@ export default function CheckOut({ HandlePlaceOrder, orderfinal, DataCart, total
       return () => {
         // Cleanup function
         // Remove the Razorpay script when component unmounts
-        const script = document.querySelector('script[src="https://checkout.razorpay.com/v1/checkout.js"]');
+        const script = document.querySelector(
+          'script[src="https://checkout.razorpay.com/v1/checkout.js"]'
+        );
         if (script) {
           document.body.removeChild(script);
         }
@@ -71,15 +86,18 @@ export default function CheckOut({ HandlePlaceOrder, orderfinal, DataCart, total
       // Handle Razorpay payment logic
       try {
         setOrderLoad(true);
-        const response = await axios.post('http://localhost:8000/crorder', {
-          amount: Number(total)
-        });
+        const response = await axios.post(
+          "https://farmserver.vercel.app/crorder",
+          {
+            amount: Number(total),
+          }
+        );
         const options = {
-          key: 'rzp_test_AwYjl9iEgMP9Zk', // Replace with your Razorpay key
-          amount: Number(total*100), // amount in paise
-          currency: 'INR',
-          name: 'FARM FRESH MARKET',
-          description: 'Test Transaction',
+          key: "rzp_test_AwYjl9iEgMP9Zk", // Replace with your Razorpay key
+          amount: Number(total * 100), // amount in paise
+          currency: "INR",
+          name: "FARM FRESH MARKET",
+          description: "Test Transaction",
           order_id: response.data.order_id,
           handler: (response) => {
             alert(response.razorpay_payment_id);
@@ -87,21 +105,21 @@ export default function CheckOut({ HandlePlaceOrder, orderfinal, DataCart, total
             OrderPlaced(orderfinal, setOrderLoad, setStatus, setCheck, onClose);
           },
           prefill: {
-            name: 'Test User',
-            email: 'test@example.com',
-            contact: '1234567890',
+            name: "Test User",
+            email: "test@example.com",
+            contact: "1234567890",
           },
           notes: {
-            address: 'Test Address',
+            address: "Test Address",
           },
           theme: {
-            color: '#476F00',
+            color: "#476F00",
           },
         };
         const rzp = new window.Razorpay(options);
         rzp.open();
       } catch (error) {
-        console.error('Error handling Razorpay payment:', error);
+        console.error("Error handling Razorpay payment:", error);
       } finally {
         setOrderLoad(false);
       }
@@ -154,7 +172,6 @@ export default function CheckOut({ HandlePlaceOrder, orderfinal, DataCart, total
                   <label class="font-medium inline-block mb-3 text-sm uppercase">
                     Shipping
                   </label>
-                
                 </div>
                 <div class="border-t mt-8">
                   <div class="flex font-semibold justify-between py-6 text-sm uppercase">
@@ -163,17 +180,22 @@ export default function CheckOut({ HandlePlaceOrder, orderfinal, DataCart, total
                   </div>
                 </div>
               </div>
-              {DataCart?.length > 0 ? check === true ? <p></p> : <Captcha setCheck={setCheck} /> : <p></p>}
+              {DataCart?.length > 0 ? (
+                check === true ? (
+                  <p></p>
+                ) : (
+                  <Captcha setCheck={setCheck} />
+                )
+              ) : (
+                <p></p>
+              )}
               <div className="w-auto">
                 <RadioGroup
                   label="Payment Mode"
                   value={selected}
                   onValueChange={setSelected}
                 >
-                  <CustomRadio
-                    description="100% Free Delivery"
-                    value="CASH"
-                  >
+                  <CustomRadio description="100% Free Delivery" value="CASH">
                     Cash On Delivery
                   </CustomRadio>
                   {/* <CustomRadio
@@ -183,11 +205,7 @@ export default function CheckOut({ HandlePlaceOrder, orderfinal, DataCart, total
                   >
                     UPI
                   </CustomRadio> */}
-                  <CustomRadio
-
-                    description="Card/Net Banking"
-                    value="CARD"
-                  >
+                  <CustomRadio description="Card/Net Banking" value="CARD">
                     Card/Net Banking
                   </CustomRadio>
                 </RadioGroup>
