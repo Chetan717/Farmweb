@@ -15,7 +15,7 @@ export default function PopularProd() {
     { value: "Sprout", name: "Sprout" },
     { value: "Chopped", name: "Chopped" },
     { value: "Pulses", name: "Pulses" },
-    { value: "Organic", name: "Organic" },
+    { value: "Organic", name: "Dryfruit" },
   ];
 
   const [selType, setSelType] = React.useState("");
@@ -39,9 +39,9 @@ export default function PopularProd() {
                 <>
                   <p
                     key={i}
-                    onClick={() => SelectType(i.value)}
+                    onClick={() => SelectType(i.name)}
                     className={
-                      selType === i.value
+                      selType === i.name
                         ? `font-semibold text-xs lg:text-sm  bg-[#476F00] rounded-lg p-2 text-white  hover:-translate-y-1 cursor-pointer`
                         : `font-semibold text-xs bg-gray-50 rounded-lg p-2 text-gray-800  hover:-translate-y-1 cursor-pointer`
                     }
