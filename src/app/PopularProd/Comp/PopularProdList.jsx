@@ -26,7 +26,7 @@ export default function PopularProdList({ selType }) {
     setLoad(load);
   };
   const FilteredproductData =
-    selType === " "
+    selType === ""
       ? proData
       : proData?.filter((i) => i.type === String(selType));
   console.log(FilteredproductData);
