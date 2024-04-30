@@ -26,14 +26,14 @@ export default function PopularProdList({ selType }) {
     setLoad(load);
   };
   const FilteredproductData =
-    selType === "All"
+    selType === " "
       ? proData
       : proData?.filter((i) => i.type === String(selType));
-      console.log(FilteredproductData)
+  console.log(FilteredproductData);
   return (
     <>
       {loading || !FilteredproductData ? (
-       <Spinner />
+        <Spinner />
       ) : (
         <>
           <div className="grid lg:grid-cols-4 grid-cols-2 md:grid-cols-3 mt-[30px]   gap-3 lg:gap-5">
