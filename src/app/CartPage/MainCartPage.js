@@ -54,7 +54,7 @@ export default function MainCartPage() {
     time: String(
       new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
     ),
-    totalAmount: total,
+    totalAmount: Number(total + Number(process.env.SHIPPING)),
     active: true,
     process: false,
     delivered: false,
@@ -130,9 +130,9 @@ export default function MainCartPage() {
           <div className="border rounded-lg w-full p-4  bg-white ">
             <div className="flex justify-between  items-center flex-row gap-0">
               {formValue?.city &&
-                formValue?.deliveryAddress &&
-                formValue?.pincode &&
-                formValue?.referenceMobileNumber ? (
+              formValue?.deliveryAddress &&
+              formValue?.pincode &&
+              formValue?.referenceMobileNumber ? (
                 <div className="flex justify-start flex-col gap-0">
                   <p className="text-sm font-normal">
                     Deliver-To:
@@ -169,7 +169,7 @@ export default function MainCartPage() {
               HandlePlaceOrder={HandlePlaceOrder}
               orderfinal={orderfinal}
               DataCart={DataCart}
-              total={total}
+              total={Number(total + Number(process.env.SHIPPING))}
             />
           </div>
         </div>

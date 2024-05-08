@@ -94,7 +94,7 @@ export default function CheckOut({
         );
         const options = {
           key: "rzp_test_AwYjl9iEgMP9Zk", // Replace with your Razorpay key
-          amount: Number(total * 100), // amount in paise
+          amount: Number(Number(total) * 100), // amount in paise
           currency: "INR",
           name: "FARM FRESH MARKET",
           description: "Test Transaction",
@@ -195,7 +195,7 @@ export default function CheckOut({
                   value={selected}
                   onValueChange={setSelected}
                 >
-                  <CustomRadio description="100% Free Delivery" value="CASH">
+                  <CustomRadio description=" Cash On Delivery" value="CASH">
                     Cash On Delivery
                   </CustomRadio>
                   {/* <CustomRadio
