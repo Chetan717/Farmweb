@@ -6,7 +6,7 @@ import axios from "axios";
 import { useSelector } from "react-redux";
 const DataContaxt = createContext();
 export default function DataProviderContext({ children }) {
-  const [user, setUser] = React.useState(false);
+  const [user, setUser] = React.useState("");
 
   const LoadVAlue = useSelector((state) => {
     return state.LoadMore

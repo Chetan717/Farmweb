@@ -4,13 +4,12 @@ import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import { useRouter } from "next/navigation";
-import DataProviderContext from "@/app/DataProviderContext/DataProviderContext";
-
+import { DataProvideBYHook } from "@/app/DataProviderContext/DataProviderContext";
 export default function ProductDes({ des }) {
   const oldCartData = useSelector((state) => {
     return state.cart;
   });
-  const {user} = DataProviderContext()
+  const {user} = DataProvideBYHook()
 
   const dispatch = useDispatch();
   const Router = useRouter();
