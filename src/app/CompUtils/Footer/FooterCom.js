@@ -89,7 +89,7 @@ export default function FooterCom() {
               </a>
             </div> */}
             <p className="text-sm p-3 texxt-center text-gray-100">
-              © Copyright 2023. All rights reserved.
+              Deloped By Roshan Wakchaure.
             </p>
           </div>
         </div>
