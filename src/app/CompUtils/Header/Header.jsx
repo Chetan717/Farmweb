@@ -28,7 +28,7 @@ export default function Navbarcom() {
             >
               {/* <Image width={50} alt="h" height={50} src="/sbt.png" /> */}
               <p className="text-white inline-flex flex-col  font-bold lg:text-sm text-xs">
-                <span className="">🍅FRESH 🥦FARM 🍓MARKET</span>
+                <span className="">FRESH FRUIT</span>
               </p>
             </div>
           </NavbarBrand>
