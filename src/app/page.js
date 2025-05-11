@@ -21,7 +21,7 @@ export default function page() {
       <div className="flex flex-col justify-center items-center lg:gap-5 gap-5 p-2">
         {/* <Categoriespro /> */}
         {/* <Hero /> */}
-        <Offer link={`https://t3.ftcdn.net/jpg/01/63/13/30/360_F_163133061_TlMOMqgxAvBuwzLAjxOQ8v1FQ3OexfRG.jpg`} />
+        <Offer link={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO-bT8EZjMl7I2VOy_uvDpjUjbN2LKK3ym1w&s`} />
         <PopularProd />
         <Offer link={`https://t3.ftcdn.net/jpg/01/63/13/30/360_F_163133061_TlMOMqgxAvBuwzLAjxOQ8v1FQ3OexfRG.jpg`} />
 
